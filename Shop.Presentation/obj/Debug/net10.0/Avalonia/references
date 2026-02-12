@@ -10,6 +10,7 @@ C:\Users\mikke\.nuget\packages\avalonia.fonts.inter\11.3.11\lib\net8.0\Avalonia.
 C:\Users\mikke\.nuget\packages\avalonia.freedesktop\11.3.11\lib\net8.0\Avalonia.FreeDesktop.dll
 C:\Users\mikke\.nuget\packages\avalonia\11.3.11\ref\net8.0\Avalonia.Markup.dll
 C:\Users\mikke\.nuget\packages\avalonia\11.3.11\ref\net8.0\Avalonia.Markup.Xaml.dll
+C:\Users\mikke\.nuget\packages\avalonia.markup.xaml.loader\11.0.0\lib\net6.0\Avalonia.Markup.Xaml.Loader.dll
 C:\Users\mikke\.nuget\packages\avalonia\11.3.11\ref\net8.0\Avalonia.Metal.dll
 C:\Users\mikke\.nuget\packages\avalonia\11.3.11\ref\net8.0\Avalonia.MicroCom.dll
 C:\Users\mikke\.nuget\packages\avalonia.native\11.3.11\lib\net8.0\Avalonia.Native.dll
@@ -23,6 +24,7 @@ C:\Users\mikke\.nuget\packages\avalonia.win32\11.3.11\lib\net8.0\Avalonia.Win32.
 C:\Users\mikke\.nuget\packages\avalonia.win32\11.3.11\lib\net8.0\Avalonia.Win32.dll
 C:\Users\mikke\.nuget\packages\avalonia.x11\11.3.11\lib\net8.0\Avalonia.X11.dll
 C:\Users\mikke\.nuget\packages\harfbuzzsharp\8.3.1.1\lib\net8.0\HarfBuzzSharp.dll
+C:\Users\mikke\.nuget\packages\hotavalonia.core\3.1.0\lib\netstandard2.1\HotAvalonia.Core.dll
 C:\Users\mikke\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.3\ref\net10.0\Microsoft.CSharp.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.3\ref\net10.0\Microsoft.VisualBasic.Core.dll

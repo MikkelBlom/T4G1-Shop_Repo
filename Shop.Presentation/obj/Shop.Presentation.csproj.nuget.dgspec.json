@@ -768,6 +768,11 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.3.11, )"
+            },
+            "HotAvalonia": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.*, )"
             }
           },
           "imports": [

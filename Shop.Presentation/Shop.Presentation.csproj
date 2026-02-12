@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HotAvalonia" Version="3.*" PrivateAssets="All" Publish="True" />
     <ProjectReference Include="..\Shop.Domain\Shop.Domain.csproj" />
     <ProjectReference Include="..\Shop.Shared\Shop.Shared.csproj" />
     <Watch Include="**\*.axaml" />

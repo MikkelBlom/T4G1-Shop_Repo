@@ -195,6 +195,22 @@
           }
         }
       },
+      "Avalonia.Markup.Xaml.Loader/11.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Avalonia.Markup.Xaml.Loader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Avalonia.Markup.Xaml.Loader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Avalonia.Native/11.3.11": {
         "type": "package",
         "dependencies": {
@@ -325,6 +341,12 @@
           }
         }
       },
+      "Fody/6.9.2": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
       "HarfBuzzSharp/8.3.1.1": {
         "type": "package",
         "dependencies": {
@@ -446,6 +468,60 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "HotAvalonia/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia.Markup.Xaml.Loader": "11.0.0",
+          "HotAvalonia.Core": "3.1.0",
+          "HotAvalonia.Extensions": "3.1.0",
+          "HotAvalonia.Fody": "3.1.0"
+        },
+        "build": {
+          "build/HotAvalonia.props": {},
+          "build/HotAvalonia.targets": {}
+        }
+      },
+      "HotAvalonia.Core/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/HotAvalonia.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/HotAvalonia.Core.dll": {}
+        }
+      },
+      "HotAvalonia.Extensions/3.1.0": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/cs/any/AvaloniaHotReloadExtensions.cs": {
+            "buildAction": "Compile",
+            "codeLanguage": "cs",
+            "copyToOutput": false
+          },
+          "contentFiles/fs/any/AvaloniaHotReloadExtensions.fs": {
+            "buildAction": "Compile",
+            "codeLanguage": "fs",
+            "copyToOutput": false
+          },
+          "contentFiles/vb/any/AvaloniaHotReloadExtensions.vb": {
+            "buildAction": "Compile",
+            "codeLanguage": "vb",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "build/HotAvalonia.Extensions.props": {}
+        }
+      },
+      "HotAvalonia.Fody/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.9.2"
+        },
+        "build": {
+          "build/HotAvalonia.Fody.props": {}
         }
       },
       "MicroCom.Runtime/0.11.0": {
@@ -898,6 +974,22 @@
         "lib/netstandard2.0/Avalonia.FreeDesktop.xml"
       ]
     },
+    "Avalonia.Markup.Xaml.Loader/11.0.0": {
+      "sha512": "SDcf5qvleyTb0R24vzZBhFJV9ONlGz0ftOBRxXiSy7R6c513Rjnae0IImuUXSIj+Bmn8AjU6x9eDFRJO78pYVA==",
+      "type": "package",
+      "path": "avalonia.markup.xaml.loader/11.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.markup.xaml.loader.11.0.0.nupkg.sha512",
+        "avalonia.markup.xaml.loader.nuspec",
+        "lib/net6.0/Avalonia.Markup.Xaml.Loader.dll",
+        "lib/net6.0/Avalonia.Markup.Xaml.Loader.xml",
+        "lib/netstandard2.0/Avalonia.Markup.Xaml.Loader.dll",
+        "lib/netstandard2.0/Avalonia.Markup.Xaml.Loader.xml"
+      ]
+    },
     "Avalonia.Native/11.3.11": {
       "sha512": "21XxwcOCYuf7fSYBsc4sF7CS0xNK80iDFyXyK9L4awnrjZOJjMuNSGiJ2L5+RQQkXnXaB8ECvMAWN3e/9WN3aw==",
       "type": "package",
@@ -1029,6 +1121,41 @@
         "lib/net8.0/Avalonia.X11.xml",
         "lib/netstandard2.0/Avalonia.X11.dll",
         "lib/netstandard2.0/Avalonia.X11.xml"
+      ]
+    },
+    "Fody/6.9.2": {
+      "sha512": "YBHobPGogb0vYhGYIxn/ndWqTjNWZveDi5jdjrcshL2vjwU3gQGyDeI7vGgye+2rAM5fGRvlLgNWLW3DpviS/w==",
+      "type": "package",
+      "path": "fody/6.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.9.2.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb",
+        "package_icon.png",
+        "package_readme.md"
       ]
     },
     "HarfBuzzSharp/8.3.1.1": {
@@ -1187,6 +1314,76 @@
         "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+      ]
+    },
+    "HotAvalonia/3.1.0": {
+      "sha512": "31ppkXIyD+PppUyZ0oqUjaP3I6fJDkl2w95EHGN22xxh/P54hNpEiwDsAT1KPKtUMJoGtxRE5EZcc04kia42Eg==",
+      "type": "package",
+      "path": "hotavalonia/3.1.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "build/HotAvalonia.props",
+        "build/HotAvalonia.targets",
+        "hotavalonia.3.1.0.nupkg.sha512",
+        "hotavalonia.nuspec",
+        "icon.png",
+        "tasks/netstandard2.0/HotAvalonia.dll",
+        "tools/HotAvalonia.Remote.dll",
+        "tools/HotAvalonia.Remote.runtimeconfig.json"
+      ]
+    },
+    "HotAvalonia.Core/3.1.0": {
+      "sha512": "E4Q+Wm7kp5XyEWRLshRcoxgHShyMO3J8QcdoyDZfXMukuR+9FqXnEFrcStn2igDo/TIo/6wVOMNbv8Cu4FI5hg==",
+      "type": "package",
+      "path": "hotavalonia.core/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "hotavalonia.core.3.1.0.nupkg.sha512",
+        "hotavalonia.core.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/HotAvalonia.Core.dll",
+        "lib/netstandard2.1/HotAvalonia.Core.dll"
+      ]
+    },
+    "HotAvalonia.Extensions/3.1.0": {
+      "sha512": "RhDF4CFDHZi5GKBFJLw2mLwh0TieKO/JlJa8yohnK0dhh5B8gEr3b512zlDUXpQKZIVvTPRwNm4CwgczlxH37A==",
+      "type": "package",
+      "path": "hotavalonia.extensions/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "build/HotAvalonia.Extensions.props",
+        "contentFiles/cs/any/AvaloniaHotReloadExtensions.cs",
+        "contentFiles/fs/any/AvaloniaHotReloadExtensions.fs",
+        "contentFiles/vb/any/AvaloniaHotReloadExtensions.vb",
+        "hotavalonia.extensions.3.1.0.nupkg.sha512",
+        "hotavalonia.extensions.nuspec",
+        "icon.png"
+      ]
+    },
+    "HotAvalonia.Fody/3.1.0": {
+      "sha512": "xmbLwsK+SQOZcFFGeXcjkWBddVZ1Cql4oOJkO7/mcDiCO/kjY7UeP0+hsnXICfiBfiFGNh1XYiwbAZiONWL5kw==",
+      "type": "package",
+      "path": "hotavalonia.fody/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "build/HotAvalonia.Fody.props",
+        "hotavalonia.fody.3.1.0.nupkg.sha512",
+        "hotavalonia.fody.nuspec",
+        "icon.png",
+        "weavers/netstandard2.0/HotAvalonia.Fody.dll"
       ]
     },
     "MicroCom.Runtime/0.11.0": {
@@ -1418,6 +1615,7 @@
       "Avalonia.Diagnostics >= 11.3.11",
       "Avalonia.Fonts.Inter >= 11.3.11",
       "Avalonia.Themes.Fluent >= 11.3.11",
+      "HotAvalonia >= 3.*",
       "Shop.Domain >= 1.0.0",
       "Shop.Shared >= 1.0.0"
     ]
@@ -1499,6 +1697,11 @@
           "Avalonia.Themes.Fluent": {
             "target": "Package",
             "version": "[11.3.11, )"
+          },
+          "HotAvalonia": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.*, )"
           }
         },
         "imports": [
