@@ -21,11 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shop.Domain\Shop.Domain.csproj" />
+    <ProjectReference Include="..\Shop.Shared\Shop.Shared.csproj" />
     <Watch Include="**\*.axaml" />
     <Watch Include="Views\**\*.axaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Shop.Shared\Shop.Shared.csproj" />
   </ItemGroup>
 </Project>
