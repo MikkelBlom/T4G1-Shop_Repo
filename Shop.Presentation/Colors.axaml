@@ -1,0 +1,12 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Color x:Key="TextFillColor">#1C1C1C</Color>
+    <Color x:Key="BackgroundFillColor">#F2F2F2</Color>
+    <Color x:Key="AccentFillColor">#FAF3DD</Color>
+
+    <SolidColorBrush x:Key="TextColor" Color="{StaticResource TextFillColor}" />
+    <SolidColorBrush x:Key="BackgroundColor" Color="{StaticResource BackgroundFillColor}" />
+    <SolidColorBrush x:Key="AccentColor" Color="{StaticResource AccentFillColor}" />
+    
+</ResourceDictionary>

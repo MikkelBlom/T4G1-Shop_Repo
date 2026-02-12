@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:Shop.Presentation"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Shop.Presentation.MainWindow"
+        Title="Arnes Elektronik Shop"
+        Background="{StaticResource BackgroundColor}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid RowDefinitions="Auto, *, Auto">
+        <local:HeaderView Grid.Row="0"/>
+            <StackPanel Grid.Row="1" Margin="20">
+                <TextBlock Text="Velkommen til Arnes Elektronik Shop!" Foreground="{StaticResource TextColor}" Margin="10"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="10">Knap 1</Button>
+                    <Button Margin="10">Knap 2</Button>
+                </StackPanel>
+            </StackPanel>
+            <local:FooterView Grid.Row="2"/>
+        </Grid>
+    </ScrollViewer>
+</Window>

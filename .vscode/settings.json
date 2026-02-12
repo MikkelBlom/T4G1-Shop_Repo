@@ -1,0 +1,5 @@
+{
+    "dotnet.defaultSolution": "Shop.sln",
+    "avalonia.solutionPath": "Shop.sln",
+    "avalonia.projectPath": "Shop.Presentation/Shop.Presentation.csproj"
+}
