@@ -25,5 +25,6 @@
     <ProjectReference Include="..\Shop.Shared\Shop.Shared.csproj" />
     <Watch Include="**\*.axaml" />
     <Watch Include="Views\**\*.axaml" />
+    <AvaloniaResource Include="Assets\**\*.*" />
   </ItemGroup>
 </Project>

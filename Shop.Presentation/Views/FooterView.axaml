@@ -12,7 +12,7 @@
                 FontSize="14"
                 Margin="10"
                 Grid.Column="1"
-                HorizontalAlignment="Center">© 2026 Arnes Shop - Alle rettigheder forbeholdes.</TextBlock>
+                HorizontalAlignment="Center">© 2026 Arnes Elektronik - Alle rettigheder forbeholdes.</TextBlock>
         </Grid>
     </Border>
 </UserControl>

@@ -1,13 +1,15 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Shop.Presentation.HeaderView">
-    
+
     <Border Background="{StaticResource BackgroundColor}" Padding="20" Margin="0 0 0 10">
         <Border.Effect>
             <DropShadowEffect Color="Black" BlurRadius="20" OffsetY="2" Opacity="0.5"/>
         </Border.Effect>
         <Grid ColumnDefinitions="Auto, *, Auto">
-            <TextBlock Text="ARNES ELEKTRONIK SHOP" Foreground="{StaticResource TextColor}" FontWeight="Bold" FontSize="20"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <Image Source="avares://Shop.Presentation/Assets/FullLogo.png" Height="80" Margin="10"/>
+            </StackPanel>
         </Grid>
     </Border>
 </UserControl>

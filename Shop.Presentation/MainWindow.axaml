@@ -5,13 +5,14 @@
         xmlns:local="using:Shop.Presentation"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Shop.Presentation.MainWindow"
-        Title="Arnes Elektronik Shop"
+        Title="Arnes Elektronik"
+        Icon="avares://Shop.Presentation/Assets/NoTextLogo.png"
         Background="{StaticResource BackgroundColor}">
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
         <Grid RowDefinitions="Auto, *, Auto">
         <local:HeaderView Grid.Row="0"/>
             <StackPanel Grid.Row="1" Margin="20">
-                <TextBlock Text="Velkommen til Arnes Elektronik Shop!" Foreground="{StaticResource TextColor}" Margin="10"/>
+                <TextBlock Text="Velkommen til Arnes Elektronik!" Foreground="{StaticResource TextColor}" Margin="10"/>
                 <StackPanel Orientation="Horizontal">
                     <Button Margin="10">Knap 1</Button>
                     <Button Margin="10">Knap 2</Button>
