@@ -1,0 +1,18 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Shop.Presentation.PIP_UserControl">
+            <Grid ColumnDefinitions="*, *" ShowGridLines="true">
+                <StackPanel Grid.Column="1" Margin="20">
+                    <TextBlock Name="ProductName" Text="Produkt Navn" FontSize="25" Foreground="{StaticResource TextColor}" Margin="0, 0, 0, 10"/>
+                    <TextBlock Text="Kort Introduktion til produkt" Foreground="{StaticResource TextColor}"/>
+                    <Grid ColumnDefinitions="Auto, *" Margin="0, 10, 0, 0">
+                        <TextBox Grid.Column="0" Name="ProductPrice" Text="Produkt Pris" VerticalAlignment="Center"  Foreground="{StaticResource TextColor}"/>
+                        <Button Grid.Column="1" HorizontalAlignment="Right" Content="Læg i kurv" Foreground="{StaticResource TextColor}"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Margin="20">
+                    <Image Source="avares://Shop.Presentation/Assets/FullLogo.png" Height="150"/>
+                    <TextBlock Text="Specifikationer omkring produkt" Foreground="{StaticResource TextColor}" Margin="0, 15, 0, 0"/>
+                </StackPanel>
+            </Grid>
+</UserControl>
