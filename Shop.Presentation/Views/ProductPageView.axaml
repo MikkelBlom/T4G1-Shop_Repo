@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Shop.Presentation"
+             xmlns:labs="clr-namespace:Avalonia.Labs.Panels;assembly=Avalonia.Labs.Panels"
+             x:Class="Shop.Presentation.ProductPageView"
+             x:DataType="local:ProductPageView">
+
+    <Grid 
+        ColumnDefinitions="Auto, *"
+        RowDefinitions="Auto, *"
+           >
+        
+        <!-- SIDEBAR PLACEHOLDER -->
+        <Border Background="{StaticResource BackgroundColor}" Margin="10 0 0 0" BorderBrush="Black" BorderThickness="1" Padding="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.5" BlurRadius="20" Color="Black" OffsetX="0" OffsetY="0"/>
+            </Border.Effect>
+            <StackPanel Margin="10">
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+                <TextBox>SIDEBAR PLACEHOLDER</TextBox>
+            </StackPanel>
+        </Border>
+
+        <!-- FILTERS PLACEHOLDER -->
+        <Border Background="{StaticResource BackgroundColor}" Margin="10 0 10 10" BorderBrush="Black" BorderThickness="1" Padding="10" Grid.Column="1" Grid.Row="0">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.5" BlurRadius="20" Color="Black" OffsetX="0" OffsetY="0"/>
+            </Border.Effect>
+            <StackPanel Margin="10" Orientation="Horizontal" Spacing="20">
+                <TextBlock>FILTERS PLACEHOLDER</TextBlock>
+                <TextBlock>FILTERS PLACEHOLDER</TextBlock>
+                <TextBlock>FILTERS PLACEHOLDER</TextBlock>
+                <TextBlock>FILTERS PLACEHOLDER</TextBlock>
+                <TextBlock>FILTERS PLACEHOLDER</TextBlock>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Column="1" Grid.Row="1" Margin="10 0 10 0">
+            <Border>
+                <ItemsControl ItemsSource="{Binding ProductCollection}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <labs:FlexPanel 
+                                Wrap="Wrap" 
+                                Direction="Row" 
+                                JustifyContent="SpaceBetween" 
+                                RowSpacing="10" 
+                                ColumnSpacing="10"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                        
+                        
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <local:ProductPageCardView/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Border>
+        </Grid>
+        
+    </Grid>
+</UserControl>

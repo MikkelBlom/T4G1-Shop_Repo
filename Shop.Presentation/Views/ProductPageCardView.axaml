@@ -1,0 +1,102 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Shop.Presentation"
+             xmlns:material="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             x:Class="Shop.Presentation.ProductPageCardView"
+             x:DataType="local:ProductPageCardView">
+
+    <Grid 
+        ColumnDefinitions="Auto"
+        RowDefinitions="Auto"
+           >
+        
+        <!-- PRODUCT CARD CONTENT -->
+        <Border
+            Background="{StaticResource BackgroundColor}" 
+            Margin="10"
+            CornerRadius="10"
+            ClipToBounds="True">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.5" BlurRadius="20" Color="Black" OffsetX="0" OffsetY="0"/>
+            </Border.Effect>
+            <Grid
+                ColumnDefinitions="300"
+                RowDefinitions="Auto, *"
+                >
+                <Border Grid.Column="0" Grid.Row="0">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity="0.25" BlurRadius="20" Color="Black" OffsetX="0" OffsetY="1"/>
+                    </Border.Effect>
+                    <Image Source="avares://Shop.Presentation/Assets/product_image_placeholder.png" Stretch="UniformToFill" Height="300"/>    
+                </Border>
+                <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="10">
+                    <material:MaterialIcon Kind="HeartOutline" Width="18" Height="18"/>
+                </Button>
+                <Grid Grid.Column="0" Grid.Row="1"
+                    ColumnDefinitions="Auto, *"
+                    RowDefinitions="Auto, Auto, Auto, Auto"
+                    >
+                    <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Margin="10 20 10 10" FontSize="15" FontWeight="Bold" Text="{Binding Title}"/>
+                    <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="10 0 10 10" FontSize="15" TextWrapping="WrapWithOverflow">Product Snippet Here Placeholder Text Remains At This Spot</TextBlock>
+                    <StackPanel Margin="10 0 0 0" Orientation="Horizontal" Spacing="10" Grid.Column="0" Grid.Row="2">
+                        <material:MaterialIcon Kind="Star" Height="24" Width="24"/>
+                        <material:MaterialIcon Kind="Star" Height="24" Width="24"/>
+                        <material:MaterialIcon Kind="Star" Height="24" Width="24"/>
+                        <material:MaterialIcon Kind="StarHalfFull" Height="24" Width="24"/>
+                        <material:MaterialIcon Kind="StarOutline" Height="24" Width="24"/>
+                    </StackPanel>    
+                    <TextBlock Grid.Column="0" Grid.Row="3" Margin="10" FontSize="25" FontWeight="Heavy" Text="{Binding Price}"/>
+                    <Button 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Margin="30 10 10 10" 
+                        Grid.Column="1" 
+                        Grid.Row="2"
+                        Grid.RowSpan="2"
+                        Background="#2667ff"
+                        Foreground="GhostWhite">
+                        <material:MaterialIcon x:Name="CartIcon"/>
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="#1e52cc"/>
+                                <Setter Property="Foreground" Value="GhostWhite"/>
+                            </Style>
+                            
+                            <Style Selector="Button:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="#153d99"/>
+                                <Setter Property="Foreground" Value="GhostWhite"/>
+                            </Style>
+
+                            <Style Selector="Button material|MaterialIcon">
+                                <Setter Property="Kind" Value="CartOutline"/>
+                                <Setter Property="Width" Value="24"/>
+                                <Setter Property="Height" Value="24"/>
+                                <Setter Property="Transitions">
+                                    <Transitions>
+                                        <DoubleTransition Property="Width" Duration="0:0:0.2" Easing="CubicEaseInOut"/>
+                                        <DoubleTransition Property="Height" Duration="0:0:0.2" Easing="CubicEaseInOut"/>
+                                    </Transitions>
+                                </Setter>
+                            </Style>
+
+                            <Style Selector="Button:pointerover material|MaterialIcon#CartIcon">
+                                <Setter Property="material:MaterialIcon.Kind" Value="CartArrowDown"/>
+                                <Setter Property="Width" Value="32"/>
+                                <Setter Property="Height" Value="32"/>
+                            </Style>
+
+                            <Style Selector="Button:pressed material|MaterialIcon">
+                                <Setter Property="Kind" Value="CartCheck"/>
+                                <Setter Property="Width" Value="24"/>
+                                <Setter Property="Height" Value="24"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
