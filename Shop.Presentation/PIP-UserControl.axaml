@@ -1,17 +1,63 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="Shop.Presentation.PIP_UserControl">
-            <Grid ColumnDefinitions="*, *" ShowGridLines="true">
+             xmlns:local="using:Shop.Presentation"
+             xmlns:material="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             x:Class="Shop.Presentation.PIP_UserControl"
+             x:DataType="local:PIP_UserControl">
+            <Grid ColumnDefinitions="* Auto" ShowGridLines="true">
                 <StackPanel Grid.Column="1" Margin="20">
-                    <TextBlock Name="ProductName" Text="Produkt Navn" FontSize="25" Foreground="{StaticResource TextColor}" Margin="0, 0, 0, 10"/>
+                    <TextBlock Name="ProductName" Text="{Binding Title}" FontSize="25" Foreground="{StaticResource TextColor}" Margin="0, 0, 0, 10"/>
                     <TextBlock Text="Kort Introduktion til produkt" Foreground="{StaticResource TextColor}"/>
                     <Grid ColumnDefinitions="Auto, *" Margin="0, 10, 0, 0">
-                        <TextBox Grid.Column="0" Name="ProductPrice" Text="Produkt Pris" VerticalAlignment="Center"  Foreground="{StaticResource TextColor}"/>
-                        <Button Grid.Column="1" HorizontalAlignment="Right" Content="Læg i kurv" Foreground="{StaticResource TextColor}"/>
+                        <TextBlock Grid.Column="0" Margin="10" FontSize="25" FontWeight="Heavy" Text="{Binding Price}"/>
+                        <Button 
+                            HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Stretch"
+                            Margin="30 10 10 10" 
+                            Grid.Column="1"
+                            Background="#2667ff"
+                            Foreground="GhostWhite">
+                        <material:MaterialIcon x:Name="CartIcon"/>
+                        <Button.Styles>
+                            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="#1e52cc"/>
+                                <Setter Property="Foreground" Value="GhostWhite"/>
+                            </Style>
+                            
+                            <Style Selector="Button:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="#153d99"/>
+                                <Setter Property="Foreground" Value="GhostWhite"/>
+                            </Style>
+
+                            <Style Selector="Button material|MaterialIcon">
+                                <Setter Property="Kind" Value="CartOutline"/>
+                                <Setter Property="Width" Value="24"/>
+                                <Setter Property="Height" Value="24"/>
+                                <Setter Property="Transitions">
+                                    <Transitions>
+                                        <DoubleTransition Property="Width" Duration="0:0:0.2" Easing="CubicEaseInOut"/>
+                                        <DoubleTransition Property="Height" Duration="0:0:0.2" Easing="CubicEaseInOut"/>
+                                    </Transitions>
+                                </Setter>
+                            </Style>
+
+                            <Style Selector="Button:pointerover material|MaterialIcon#CartIcon">
+                                <Setter Property="material:MaterialIcon.Kind" Value="CartArrowDown"/>
+                                <Setter Property="Width" Value="32"/>
+                                <Setter Property="Height" Value="32"/>
+                            </Style>
+
+                            <Style Selector="Button:pressed material|MaterialIcon">
+                                <Setter Property="Kind" Value="CartCheck"/>
+                                <Setter Property="Width" Value="24"/>
+                                <Setter Property="Height" Value="24"/>
+                            </Style>
+                        </Button.Styles>
+                    </Button>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Column="0" Margin="20">
-                    <Image Source="avares://Shop.Presentation/Assets/FullLogo.png" Height="150"/>
+                    <Image Source="avares://Shop.Presentation/Assets/product_image_placeholder.png" Height="150"/>
                     <TextBlock Text="Specifikationer omkring produkt" Foreground="{StaticResource TextColor}" Margin="0, 15, 0, 0"/>
                 </StackPanel>
             </Grid>
